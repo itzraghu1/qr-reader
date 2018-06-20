@@ -1,14 +1,11 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<div *ngIf="qrheader" class="div-scan">
+	<div class="scanner-object"></div>
+</div>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+<ion-footer *ngIf="qrheader">
+	<ion-row>
+		<ion-col col-4><ion-icon name="ios-arrow-dropleft-outline" class="qrscan-icon" (tap)="exit_from_qr_scan()"></ion-icon></ion-col>
+		<ion-col col-4><ion-icon name="flash" class="qrscan-icon" (tap)="light_enable_desable()"></ion-icon></ion-col>
+		<ion-col col-4><ion-icon name="camera" class="qrscan-icon" (tap)= "change_camera()"></ion-icon></ion-col>
+	</ion-row>
+</ion-footer>
