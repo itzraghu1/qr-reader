@@ -16,7 +16,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  export class ResultPage {
  	result:string="";
  	constructor(public navCtrl: NavController, public navParams: NavParams) {
- 		this.result = this.navParams.get('userParams');
+ 		this.result = this.navParams.get('result');
+ 		console.log(this.result);
  	}
 
  	ionViewDidLoad() {

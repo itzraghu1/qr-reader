@@ -41,6 +41,8 @@ export class HomePage {
 			if (status.authorized) {
 				console.log('Camera Permission Given');
 				this.scanSub = this.qrScanner.scan().subscribe((text: string) => {
+					console.log(text);
+					this.hideCamera(); 
 					this.navCtrl.push(ResultPage,{'result':text});
 					this.qrScanner.hide();
 					this.scanSub.unsubscribe(); 
